@@ -1,10 +1,22 @@
-# HKNet: Hybrid Kernel Network for Image Dehazing
+# HKNet: An Aligned-Kernel Network for Image Dehazing
 
 ## Authors
 Li Wan, Xiaolin Zhang
 
+![arch](pic/all.png)
+
 ## Abstract
-(TBD)
+
+Image restoration, which aims to reconstruct high-quality visual content from degraded inputs, plays a crucial role in numerous practical applications. Although Transformer-based architectures have achieved leading performance in this field due to their powerful global modeling capabilities, their inherent quadratic computational complexity severely restricts their deployment efficiency. To address this challenge, we propose an efficient Aligned-Kernel Network, termed AKNet. The core of our network is the designed Aligned-Kernel Module, which innovatively employs ultra-large-kernel convolutions to capture a global receptive field in a cost-effective manner. This approach emulates the long-range dependency modeling of Transformers and is further augmented with strip convolutions to enhance multi-scale feature representations. Furthermore, we introduce a Frequency-aware Fusion module for efficient multi-scale feature integration. This module adaptively synergizes low-frequency components, which contain global structures, with high-frequency components that represent fine details at the frequency level, thereby significantly improving the quality of feature fusion. Extensive evaluations on ten benchmark datasets across diverse tasks, including image dehazing, desnowing, and defocus deblurring, demonstrate that our proposed AKNet outperforms existing methods on multiple metrics, achieving a superior balance between reconstruction performance, parameter count, and computational complexity. 
+
+## Experiments
+
+### Dehaze
+![haze](pic/indoor_outdoor_Overlap.png)
+### Desnow
+![desnow](pic/snow.png)
+### Defocus Deblur
+![desnow](pic/dpdd.png)
 
 ## Datasets
 
@@ -23,16 +35,6 @@ Li Wan, Xiaolin Zhang
 - [CSD](https://pan.baidu.com/s/1iUC3Y5Wn_rpy4P48x5hpVQ?pwd=352s)
 - [SRRS](https://pan.baidu.com/s/14bGq_pvpUXv1k1wWJqZs4g?pwd=vcda)
 - [Snow100K](https://pan.baidu.com/s/1TjR1VIn6MIqAD7UjguAmqg?pwd=4wi3)
-
-## Pre-trained Models
-
-### Dehazing Datasets
-- [ITS](https://pan.baidu.com/s/1lfoOJLyCREXFkLHPJZJ9kQ?pwd=1v1a)
-- [OTS](https://pan.baidu.com/s/1BCFiHWsdkxGKpFbk68IHIQ?pwd=iz2n)
-
-### Low-light Enhancement Datasets
-- [LOLv2-r](https://pan.baidu.com/s/1_KU_VCdCBfnyG3_CsUSuBg?pwd=7w7a)
-- [LOLv2-s](https://pan.baidu.com/s/1685LqNiu_c09-b8p3g4BYg?pwd=mr89)
 
 ## Environment Setup
 
@@ -69,6 +71,10 @@ Training results will be saved in the `results/OKNet/ots/` directory.
 
 ## Testing
 
+### pretrained  model
+
+download model pth files from modelscope [AKNet](https://www.modelscope.cn/models/zhangasd/AKNet/)
+
 To test the model, run the following command:
 
 ```bash
@@ -80,11 +86,6 @@ Important arguments:
 - `--save_image`: Whether to save test result images, default is False
 
 Test results will be saved in the specified `--result_dir` directory.
-
-## todolist
-
-1. 实验对比图 Representitive Results
-2. 网络结构图 Overal Architecture
   
 ## Issues
 
