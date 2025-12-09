@@ -53,7 +53,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     # Directories
-    parser.add_argument('--model_name', default='OKNet',type=str)
+    parser.add_argument('--model_name', default='AKNet',type=str)
     parser.add_argument('--data_dir', type=str, default='/root/data/reside-indoor')
     parser.add_argument('--mode', default='train', choices=['train', 'test'], type=str)
 
@@ -74,13 +74,13 @@ if __name__ == '__main__':
     parser.add_argument('--save_image', type=bool, default=False, choices=[True, False])
 
     args = parser.parse_args()
-    args.model_save_dir = os.path.join('results/', 'OKNet', 'ots/')
+    args.model_save_dir = os.path.join('results/', 'AKNet', 'ots/')
     args.result_dir = os.path.join('results/', args.model_name, 'test')
     if not os.path.exists(args.model_save_dir):
         os.makedirs(args.model_save_dir)
     command = 'cp ' + 'models/layers.py ' + args.model_save_dir
     os.system(command)
-    command = 'cp ' + 'models/OKNet.py ' + args.model_save_dir
+    command = 'cp ' + 'models/AKNet.py ' + args.model_save_dir
     os.system(command)
     command = 'cp ' + 'train.py ' + args.model_save_dir
     os.system(command)

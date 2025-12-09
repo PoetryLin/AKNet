@@ -6,7 +6,7 @@ Li Wan, Xiaolin Zhang
 ![arch](pic/all.png)
 
 ![arch](pic/ak.png)
-![arch](pic/fafusion.png)
+![arch](pic/fafusion_3.png)
 
 ## Abstract
 

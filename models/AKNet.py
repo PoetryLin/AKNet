@@ -143,9 +143,9 @@ class BottleNect(nn.Module):
         return self.out_conv(out)
 
 
-class OKNet(nn.Module):
+class AKNet(nn.Module):
     def __init__(self, num_res=4):
-        super(OKNet, self).__init__()
+        super(AKNet, self).__init__()
 
         base_channel = 32
 
@@ -238,5 +238,5 @@ class OKNet(nn.Module):
         return outputs
 
 def build_net():
-    return OKNet()
+    return AKNet()
 
