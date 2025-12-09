@@ -5,8 +5,10 @@ Li Wan, Xiaolin Zhang
 
 ![arch](pic/all.png)
 
-![arch](pic/ak.png)
-![arch](pic/fafusion_3.png)
+<p align="center">
+  <img src="pic/ak.png" width="50%" height="200px"/>
+  <img src="pic/fafusion_3.png" width="49%" height="200px"/>
+</p>
 
 ## Abstract
 
