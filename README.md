@@ -1,9 +1,12 @@
-# HKNet: An Aligned-Kernel Network for Image Dehazing
+# AKNet: An Aligned-Kernel Network for Image Dehazing
 
 ## Authors
 Li Wan, Xiaolin Zhang
 
 ![arch](pic/all.png)
+
+![arch](pic/ak.png)
+![arch](pic/fafusion.png)
 
 ## Abstract
 
